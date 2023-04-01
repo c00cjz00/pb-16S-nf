@@ -333,8 +333,13 @@ datatable(dada2_qc,
 ggplot(dada2_qc %>% 
          inner_join(as_tibble(metadata, rownames = "sample-id"), by="sample-id"),
        aes(x = `non-chimeric`, y = `n_ASV`)) +
-  geom_point(aes_string(color = params$colorby)) +
   labs(x = "Non-chimeric Denoised Reads", y = "Number of ASVs")
+  
+#ggplot(dada2_qc %>% 
+#         inner_join(as_tibble(metadata, rownames = "sample-id"), by="sample-id"),
+#       aes(x = `non-chimeric`, y = `n_ASV`)) +
+#  geom_point(aes_string(color = params$colorby)) +
+#  labs(x = "Non-chimeric Denoised Reads", y = "Number of ASVs")
 ```
 
 ## Top Taxa and Plots
